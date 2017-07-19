@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HEALTHCARE ASSISTANCE PLATFORM</title>
+
+    
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/form-elements.css">
+        <link rel="stylesheet" href="css/style.css">
+
+     
+
+        
+        <link rel="shortcut icon" href="ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+       
+
+    </head>
+
+    <body>
+
+        <!-- Top content -->
+        <div class="top-content ">
+        	
+            <div class="inner-bg">
+                <div class="container ">
+                	
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                             <br><br>
+                             <h1 style="font-size:40px;">HEALTHCARE ASSISTANCE PLATFORM Login &amp; Register Portal</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-5">
+                        	
+                        	<div class="form-box">
+	                        	<div class="form-top">
+	                        		<div class="form-top-left">
+	                        			<h2 style="font-size:60px">Login to our site</h2>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-lock"></i>
+	                        		</div>
+	                            </div>
+	                            <div class="form-bottom">
+				                    <form role="form" action ="login.php" method= "get" class="login-form">
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-username">Username</label>
+				                        	<input type="text" name = "username" placeholder="Username..." class="form-username form-control" id="form-username">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-password">Password</label>
+				                        	<input type="password" name = "password" placeholder="Password..." class="form-password form-control" id="form-password">
+				                        </div>
+                                        <div class = "form-group">
+                                            <span style="display:inline-block; width: 10px;"></span>
+                                            <font color="white""><label style="font-weight: normal" for = "name">Are you:</label></font>
+                                            <span style="display:inline-block; width: 20px;"></span>
+                                            <select name = "type" id="type3" style="width:100px">
+                                                
+                                                <option value="users" style="width:150px">Patient</option>
+                                                <option value="doctors" style="width:150px">Doctor</option>
+                                            </select>
+                                            
+                                        </div>
+				                        <button class="btn">Sign in!</button>
+				                    </form>
+			                    </div>
+		                    </div>
+		                
+		                	
+	                        
+                        </div>
+                        
+                        <div class="col-sm-1 middle-border"></div>
+                        <div class="col-sm-1"></div>
+                        	
+                        <div class="col-sm-5">
+                        	
+                        	<div class="form-box">
+                        		<div class="form-top">
+	                        		<div class="form-top-left">
+	                        			<h2 style="font-size:60px">Sign up now</h2>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-pencil"></i>
+	                        		</div>
+	                            </div>
+	                            <div class="form-bottom">
+				                    <form role="form" action="newuser.php" method="get" class="registration-form">
+				                    	<div class="form-group">
+                                            <label class="sr-only">Full Name</label>
+                                            <input type="text" name="name" id="fullname" placeholder="Full name" class="form-first-name form-control" pattern="[a-z A-Z]{1,50}">
+                                        </div>
+                                
+                                         <div class="form-group">
+                                            <label class="sr-only">Phone Number</label>
+                                            <input type ="text" name="mobile" placeholder="Phone Number" class="form-last-name form-control phone"   id="phone" style="height:50px" pattern="[0-9]{10,15}" style="font-size: 30px;line-height: 3;" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="sr-only">Username</label>
+                                            <input type="text" name="username" placeholder="Username" class="form-email form-control" pattern="[a-zA-Z0-9.@]{8,50}" required >
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only">Password</label>
+                                            <input type="password" name="password" placeholder="Password" class="form-email form-control"  pattern=".{8,50}" required>
+                                        </div>
+                                         <div class = "form-group">
+                                            <span style="display:inline-block; width: 10px;"></span>
+                                            <font color="white""><label style="font-weight: normal" for = "name">Are you:</label></font>
+                                            <span style="display:inline-block; width: 20px;"></span>
+
+                                            <select name = "type" id="type2" style="width:100px">
+                                                <option value="users">Patient</option>
+                                                <option value="doctors">Doctor</option>
+                                            </select>
+                                            <span style="display:inline-block; width: 10px;"></span>
+                                            <font color="white"><label style="display:none !important;font-weight: normal;" id="show">Unique ID:
+                                            <span style="display:inline-block; width: 10px;"></span>
+                                            <input type="password" style="width:80px; height:25px;" name="id" ></input></label></font>
+                                        </div>
+                                            
+				                        <button type="submit" class="btn">Sign me up!</button>
+				                    </form>
+			                    </div>
+                        	</div>
+                        	
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+
+
+        <!-- Javascript -->
+        <script src="js/jquery-3.1.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.backstretch.min.js"></script>
+        <script src="js/scripts.js"></script>
+         <script>
+        $(document).ready(function() {
+        $("#type2").on("change", function() {
+        if ($(this).val() === "doctors") {
+            $("#show").show();
+        }
+        else {
+            $("#show").hide();
+        }
+    });
+});
+        </script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
