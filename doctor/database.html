@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+	<link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>HEALTHCARE ASSISTANCE</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--  Material Dashboard CSS    -->
+    <link href="css/material-dashboard.css" rel="stylesheet"/>
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="css/demo.css" rel="stylesheet" />
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+<script>
+    function startTime()
+    {
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    // add a zero in front of numbers<10
+    h=checkTime(h);
+    m=checkTime(m);
+    s=checkTime(s);
+    document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+    t=setTimeout(function(){startTime()},500);
+    }
+
+    function checkTime(i)
+    {
+    if (i<10)
+      {
+      i="0" + i;
+      }
+    return i;
+    }
+    </script>
+
+</head>
+
+<body onload="startTime()">
+
+	<div class="wrapper">
+	    <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+			<!--
+	        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+		    Tip 2: you can also add an image using data-image tag
+
+			-->
+
+			<div class="logo">
+				<a href="http://www.creative-tim.com" class="simple-text">
+					HEALTHCARE ASSISTANCE
+				</a>
+			</div>
+
+
+	    	<div class="sidebar-wrapper">
+				<ul class="nav">
+	                <li>
+	                    <a href="dashboard.php">
+	                        <i class="material-icons">dashboard</i>
+	                        <p>Home</p>
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href="prescription.html">
+	                        <i class="material-icons">person</i>
+	                        <p>Create Prescription</p>
+	                    </a>
+	                </li>
+	                <li class="active">
+	                    <a href="database.html">
+	                        <i class="material-icons">content_paste</i>
+	                        <p>Disease Database</p>
+	                    </a>
+	                </li>
+	               
+	                <li>
+	                    <a href="logout.php">
+	                        <i class="material-icons">bubble_chart</i>
+	                        <p>Logout</p>
+	                    </a>
+	                </li>
+	            </ul>
+	            <div style="display: table-cell;vertical-align: bottom;text-align:center;height: 400px;width: 400px;font-size:40px;">
+                <font color="white>"><div id="txt"></div></font>
+            </div>
+	    	</div>
+		</div>
+
+	    <div class="main-panel">
+			<nav class="navbar navbar-transparent navbar-absolute">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Disease Database</a>
+					</div>
+					
+				</div>
+			</nav>
+
+	        <div class="content">
+	            <div class="container-fluid">
+	                <div class="row">
+	                    <div class="col-md-12">
+	                        <div class="card">
+	                            <div class="card-header" data-background-color="green">
+	                                <h4 class="title">Disease Database</h4>
+	                                <p class="category">Here you can find diseases with their respective symptoms</p>
+	                            </div>
+	                            <div class="card-content table-responsive">
+	                                <table class="table">
+	                                    <thead class="text-primary">
+	                                    	<th>Diseases</th>
+	                                    	<th>Symptoms</th>
+	                                    </thead>
+	                                    <tbody>
+												<tr><td>
+												influenza</td><td>	uncoordination	fever	pleuritic-pain	snuffle	throat-sore	malaise	debilitation	symptom-aggravating-factors	chill	scleral-icterus	nasal-flaring	dysuria	lip-smacking	headache	sneeze	snore	green-sputum	shortness-of-breath	distress-respiratory	blackout	extreme-exhaustion.			</td>	</tr>			
+												<tr><td>gastritis</td><td>	heme-positive	pain-abdominal	vomiting	disequilibrium	nausea	intoxication	haemorrhage	guaiac-positive	pain	decreased-body-weight	sore-to-touch	dizziness.	</td></tr>															
+												<tr><td>hypercholesterolemia</td><td>	pain	pain-chest	sweat	sweating-increased	nonsmoker	pressure-chest	syncope	numbness	chest-discomfort	shortness-of-breath	st-segment-depression	worry	t-wave-inverted	bradycardia	dyspnea	.</td>	</tr>									
+												<tr><td>epilepsy</td><td>	seizure	hypometabolism	aura	muscle-twitch	drowsiness	tremor	unresponsiveness	hemiplegia	myoclonus	gurgle	sleepy	lethargy	wheelchair-bound.	</td></tr>														
+												<tr><td>insufficiency-renal</td><td>	shortness-of-breath	hyperkalemia	orthopnea	rale	urgency-of-micturition	ascites	guaiac-positive	asthenia	apyrexial	mental-status-changes	dyspnea	difficulty	diarrhea	hypotension	breath-sounds-decreased	swelling	hypokinesia	.		</td></tr>								
+												<tr><td>dehydration</td><td>	fever	diarrhea	vomiting	hypotension	nausea	lightheadedness	unwell	mental-status-changes	anorexia	asthenia	sensory-discomfort	syncope	lethargy	dizziness	syncope	blackout	history-of---blackout		</td>	</tr>								
+												<tr><td>hypothyroidism</td><td>	shortness-of-breath	prostatism	drowsiness	sleepy	hyponatremia	fall	unsteady-gait	polyuria	hypotension	difficulty	syncope	nightmare	speech-slurred	weight-gain	asthenia	fatigue	tired	agitation	mental-status-changes	motor-retardation	vomiting	numbness	mass-of-body-structure	</td>	</tr>			
+												<tr><td>hernia-hiatal</td><td>	pain-abdominal	fatigability	prodrome	vomiting	nausea	myalgia	hyponatremia	sore-to-touch	general-discomfort	dyspnea-on-exertion	asterixis	guaiac-positive	numbness-of-hand	headache	photophobia		</td>	</tr>										
+												<tr><td>fibroid-tumor</td><td>	para-2	haemorrhage	abortion	intermenstrual-heavy-bleeding	muscle-hypotonia	hypotonic	previous-pregnancies-2	shortness-of-breath	fever	heartburn	primigravida	abnormally-hard-consistency	proteinemia		</td></tr>													
+												<tr><td>deglutition-disorder</td><td>	paresthesia	titubation	dysarthria	painful-swallowing	hoarseness	stridor	spasm	asthenia	dysdiadochokinesia	ataxia	achalasia	decreased-body-weight	stiffness	lesion	side-pain	</td>	</tr>											
+												<tr><td>osteoporosis</td><td>	prostatism	fall	hirsutism	sniffle	distended-abdomen	vertigo	numbness-of-hand	bradykinesia	pain	syncope	out-of-breath	apyrexial	urge-incontinence	lightheadedness		</td>	</tr>											
+												<tr><td>chronic-alcoholic-intoxication</td><td>	tremor	hallucinations-auditory	suicidal	hoard	irritable-mood	feeling-hopeless	feeling-suicidal	neologism	seizure	homelessness	sleeplessness	unconscious-state	panic	breath-sounds-decreased	shortness-of-breath		</td></tr>											
+												<tr><td>asthma</td>	<td>wheezing	cough	shortness-of-breath	chest-tightness	non-productive-cough	pleuritic-pain	productive-cough	symptom-aggravating-factors	distress-respiratory	</td></tr>																		
+												<tr><td>sepsis-(invertebrate)</td>	<td>fever	distress-respiratory	hypotension	tachypnea	chill	lethargy	bradycardia	breech-presentation	cyanosis	spontaneous-rupture-of-membranes	haemorrhage	unresponsiveness	rale	apyrexial		</td></tr>												
+												<tr><td>paranoia</td><td>	hallucinations-auditory	hallucinations-visual	agitation	irritable-mood	verbal-auditory-hallucinations	feeling-suicidal	suicidal	terrify	neologism	homelessness	energy-increased	mood-depressed	decompensation	cicatrisation	scar-tissue	blackout	loose-associations	</td></tr>										
+												<tr><td>ileus</td><td>	abscess-bacterial	abdomen-acute	air-fluid-level	catching-breath	abdominal-tenderness	nausea	sore-to-touch	flatulence	diarrhea	mass-of-body-structure	apyrexial	constipation	thicken	gravida-0	pain-abdominal	</td></tr>												
+												<tr><td>neoplasm</td><td>	mass-of-body-structure	lesion	pain-chest	hematuria	tumor-cell-invasion	pain	anosmia	thicken	metastatic-lesion	food-intolerance	decreased-body-weight	night-sweat	hemianopsia-homonymous	satiety-early	pain-abdominal	headache	</td></tr>											
+												<tr><td>obesity-morbid</td><td>	out-of-breath	sedentary	angina-pectoris	cough	unhappy	labored-breathing	hypothermia,-natural	dyspnea	hematocrit-decreased	wheezing	hypoxemia	renal-angle-tenderness	feels-hot/feverish	</td></tr>														
+												<tr><td>primary-malignant-neoplasm</td><td>	pain	mass-of-body-structure	lesion	cushingoid-facies	cushingoid-habitus	emphysematous-change	decreased-body-weight	ascites	hoarseness	thicken	hematuria</td>	</tr>																
+												<tr><td>failure-heart</td><td>	orthopnea	fatigue	dyspnea-on-exertion	dyspnea	shortness-of-breath	pansystolic-murmur	jugular-venous-distention	systolic-ejection-murmur	hypotension	angina-pectoris	hypokinesia			</td></tr>														
+												<tr><td>malignant-neoplasm-of-breast</td><td>	mass-in-breast	mass-of-body-structure	paresthesia	retropulsion	erythema	difficulty	lesion	estrogen-use	burning-sensation	dyspnea	swelling	formication			</td></tr>													
+												<tr><td>tonic-clonic-epilepsy</td><td>	drowsiness	lip-smacking	myoclonus	tremor	phonophobia	rolling-of-eyes	sleepy	hirsutism	moody	muscle-twitch	unresponsiveness	headache	ambidexterity	absences-finding	spasm	decreased-body-weight	tumor-cell-invasion	</td>	</tr>									
+												<tr><td>transient-ischemic-attack</td><td>	speech-slurred	dysarthria	facial-paresis	asthenia	neck-stiffness	vertigo	numbness	lightheadedness	extrapyramidal-sign	Stahli's-line	vision-blurred	headache	room-spinning	syncope	difficulty	rambling-speech	clumsiness		</td></tr>									
+												<tr><td>malignant-neoplasm-of-prostate</td><td>	hematuria	dysesthesia	asthenia	polymyalgia	passed-stones	pleuritic-pain	guaiac-positive	rale	breath-sounds-decreased	urge-incontinence	dysuria	diarrhea	vertigo	qt-interval-prolonged	ataxia	paresis	hemianopsia-homonymous	tumor-cell-invasion	hemodynamically-stable	mass-of-body-structure	rhonchus	orthostasis	decreased-body-weight</td></tr>					
+												<tr><td>embolism-pulmonary</td><td>	shortness-of-breath	hypoxemia	tachypnea	hematocrit-decreased	pain-chest	dyspnea	pleuritic-pain	neck-stiffness	yellow-sputum	productive-cough	cicatrisation	unresponsiveness	distress-respiratory	wheezing	apyrexial	non-productive-cough	</td></tr>											
+												<tr><td>tricuspid-valve-insufficiency</td><td>	shortness-of-breath	pain	vomiting	nausea	bradycardia	pain-abdominal	fever	cicatrisation	mediastinal-shift	impaired-cognition	</td></tr>																	
+												<tr><td>respiratory-failure</td><td>	hemiplegia	nausea	unresponsiveness	productive-cough	dyspnea	tachypnea	hyperkalemia	hypokinesia	sinus-rhythm	general-unsteadiness	bruit	consciousness-clear	shortness-of-breath	lesion	redness	</td></tr>												
+												<tr><td>degenerative-polyarthritis</td><td>	pain	food-intolerance	numbness-of-hand	general-discomfort	drowsiness	asthenia	nonsmoker	non-productive-cough	polydypsia	stiffness	unsteady-gait</td></tr>																	
+												<tr><td>aphasia</td><td>	clonus	egophony	facial-paresis	aphagia	muscle-twitch	paralyse	low-back-pain	charleyhorse	</td>	</tr>																		
+												<tr><td>neoplasm-metastasis</td><td>	thicken	tumor-cell-invasion	metastatic-lesion	pain-neck	lung-nodule	pain	pain-abdominal	food-intolerance	mass-of-body-structure	atypia	</td>	</tr>																
+												<tr><td>malignant-tumor-of-colon</td><td>	lesion	prostatism	constipation	general-discomfort	diarrhea	pain-abdominal	urinary-hesitation	dizzy-spells	shooting-pain	bradycardia	vomiting	systolic-ejection-murmur	nausea	hyperemesis	polydypsia	</td>	</tr>											
+												<tr><td>lymphoma</td><td>	lesion	fever	welt	transaminitis	decreased-body-weight	ataxia	tinnitus	hydropneumothorax	superimposition	haemoptysis	fatigue	tired	polydypsia	difficulty-passing-urine							</td></tr>							
+												<tr><td>anemia</td><td>	chill	guaiac-positive	monoclonal	ecchymosis	tumor-cell-invasion	haemorrhage	pallor	asthenia	fatigue	heme-positive	pain-back	orthostasis	hyponatremia	dizziness	shortness-of-breath	pain	rhonchus	arthralgia	swelling	transaminitis	</td></tr>							
+												<tr><td>chronic-obstructive-airway-disease</td><td>	shortness-of-breath	wheezing	cough	dyspnea	distress-respiratory	sputum-purulent	hypoxemia	hypercapnia	patient-non-compliance	chest-tightness	</td>					</tr>												
+												<tr><td>sickle-cell-anemia</td><td>	breakthrough-pain	pain-back	pain	shortness-of-breath	snuffle	pain-chest	pain-abdominal	hepatosplenomegaly	green-sputum	apyrexial	headache</td></tr>																	
+												<tr><td>coronary-arteriosclerosis</td><td>	pain-chest	angina-pectoris	shortness-of-breath	hypokinesia	sweat	sweating-increased	pressure-chest	dyspnea-on-exertion	orthopnea	chest-tightness	</td></tr>																	
+												<tr><td>cholecystitis</td><td>	moan	nausea	pain-abdominal	Murphy's-sign	flatulence	colic-abdominal	pain	ascites	diarrhea	qt-interval-prolonged	cardiovascular-finding	cardiovascular-event	groggy	sinus-rhythm	gasping-for-breath	constipation	feces-in-rectum	abnormally-hard-consistency	</td></tr>									
+												<tr><td>psychotic-disorder</td><td>	suicidal	hallucinations-auditory	feeling-suicidal	hallucinations-visual	motor-retardation	blackout	verbal-auditory-hallucinations	feeling-hopeless	irritable-mood	agitation	tremor	catatonia	weepiness	homelessness	sleeplessness	withdraw	energy-increased	intoxication	worry	behavior-hyperactive	patient-non-compliance	mood-depressed	terrify	nightmare	consciousness-clear		</td></tr>	
+												<tr><td>thrombus</td><td>	hypokinesia	anorexia	hypertonicity	shortness-of-breath	hypoalbuminemia	pruritus	sore-to-touch	hemodynamically-stable	facial-paresis	vomiting	stool-color-yellow</td></tr>																	
+												<tr><td>chronic-kidney-failure</td><td>	vomiting	orthopnea	hyperkalemia	oliguria	jugular-venous-distention	nausea	shortness-of-breath	mental-status-changes	diarrhea	asthenia	chest-tightness	malaise	chill	rale	fever	pleuritic-pain	apyrexial	guaiac-positive	swelling	catatonia	unresponsiveness	yellow-sputum	</td></tr>					
+												<tr><td>depressive-disorder</td><td>	feeling-suicidal	suicidal	hallucinations-auditory	feeling-hopeless	weepiness	sleeplessness	motor-retardation	irritable-mood	blackout	mood-depressed	hallucinations-visual	worry	agitation	tremor	intoxication	verbal-auditory-hallucinations	energy-increased	difficulty	nightmare	unable-to-concentrate	homelessness	</td>	</tr>					
+												<tr><td>myocardial-infarction</td><td>	pain-chest	st-segment-elevation	sweat	sweating-increased	shortness-of-breath	st-segment-depression	hypokinesia	angina-pectoris	pressure-chest	t-wave-inverted	orthopnea	rale	chest-tightness	presence-of-q-wave	palpitation	dyspnea	chest-discomfort	bradycardia	syncope	</td></tr>								
+												<tr><td>obesity</td><td>	pain	catatonia	snore	pain-chest	r-wave-feature	has-religious-belief	shortness-of-breath	fatigue	tired	overweight	systolic-murmur	mood-depressed	ecchymosis	</td></tr>														
+												<tr><td>infection-urinary-tract</td><td>	fever	dysuria	hematuria	renal-angle-tenderness	lethargy	asthenia	hyponatremia	hemodynamically-stable	distress-respiratory	difficulty-passing-urine	mental-status-changes	consciousness-clear	</td>	</tr>														
+												<tr><td>tachycardia-sinus</td><td>	left-atrial-hypertrophy	sweat	sweating-increased	alcohol-binge-episode	pressure-chest	scar-tissue	cardiovascular-finding	cardiovascular-event	orthostasis	shortness-of-breath	t-wave-inverted	vomiting	pain-abdominal		</td></tr>													
+												<tr><td>gout</td><td>	hot-flush	pain	redness	swelling	erythema	emphysematous-change	sore-to-touch	hypokinesia	ascites	patient-non-compliance	</td></tr>																	
+												<tr><td>hyperglycemia</td><td>	sore-to-touch	pruritus	feeling-strange	pustule	cushingoid-facies	cushingoid-habitus	decreased-body-weight	mood-depressed	estrogen-use	wheezing	ascites	seizure</td>	</tr>															
+												<tr><td>diverticulosis</td><td>	fecaluria	constipation	abscess-bacterial	heme-positive	lightheadedness	diarrhea	haemorrhage	pain	projectile-vomiting	pneumatouria	cystic-lesion	anorexia	nausea	feeling-suicidal	feeling-hopeless</td>	</tr>												
+												<tr><td>failure-kidney</td><td>	orthopnea	oliguria	slowing-of-urinary-stream	extreme-exhaustion	unresponsiveness	hypotension	enuresis	shortness-of-breath	haemorrhage	prostatism	no-status-change	bedridden	bedridden	fatigue	</td>	</tr>												
+												<tr><td>schizophrenia</td><td>	hallucinations-auditory	hypersomnolence	irritable-mood	verbal-auditory-hallucinations	patient-non-compliance	agitation	suicidal	worry	hallucinations-visual	underweight	underweight	homelessness	</td></tr>															
+												<tr><td>decubitus-ulcer</td><td>	systolic-murmur	frail	fever		</td></tr>																							
+												<tr><td>encephalopathy</td><td>	uncoordination	asterixis	haemorrhage	drowsiness	sleepy	absences-finding	posturing	aura	tonic-seizures	debilitation	consciousness-clear	unresponsiveness	thicken	hypokinesia						</td></tr>								
+												<tr><td>affect-labile</td><td>	extreme-exhaustion	sleeplessness	enuresis	patient-non-compliance	feeling-hopeless	hallucinations-visual	bedridden	bedridden	prostatism</td></tr>																			
+												<tr><td>carcinoma-prostate</td><td>	hematuria	dysesthesia	asthenia	polymyalgia	passed-stones	pleuritic-pain	guaiac-positive	rale	breath-sounds-decreased	urge-incontinence	dysuria	diarrhea	vertigo	qt-interval-prolonged	ataxia	paresis	hemianopsia-homonymous	tumor-cell-invasion	hemodynamically-stable	mass-of-body-structure	rhonchus	orthostasis	decreased-body-weight</td></tr>					
+												<tr><td>Alzheimer's-disease</td><td>	drool	agitation	nightmare	rhonchus	consciousness-clear	pin-point-pupils	bedridden	bedridden	frail	tremor-resting	hyperkalemia	facial-paresis	groggy	muscle-twitch	wheelchair-bound	tremor	cough	fever	</td>	</tr>								
+												<tr><td>incontinence</td><td>	paraparesis	seizure	asthenia	urge-incontinence	unconscious-state	aura	moody	fear-of-falling	tremor	spasm	unhappy	syncope	fall	stiffness	unresponsiveness</td></tr>													
+												<tr><td>hyperbilirubinemia</td><td>	cyanosis	tachypnea	para-1	bradycardia	breech-presentation	cushingoid-facies	cushingoid-habitus	cough	myalgia	</td>	</tr>																	
+												<tr><td>paroxysmal-dyspnea</td><td>	orthopnea	shortness-of-breath	dyspnea-on-exertion	jugular-venous-distention	rale	pain-chest	palpitation	sweat	sweating-increased	weight-gain	cough	dyspnea				</td>	</tr>											
+												<tr><td>bipolar-disorder</td><td>	feeling-suicidal	energy-increased	suicidal	irritable-mood	agitation	has-religious-belief	disturbed-family	hallucinations-auditory	verbal-auditory-hallucinations	weepiness	behavior-hyperactive	catatonia	feeling-hopeless	worry	sleeplessness	hypersomnia	difficulty	hallucinations-visual	hyperhidrosis-disorder	mydriasis	extrapyramidal-sign	loose-associations	intoxication	motor-retardation	homelessness	blackout	tremor	exhaustion</td></tr>
+												<tr><td>hepatitis</td><td>	ascites	spontaneous-rupture-of-membranes	tachypnea	pain-abdominal	pruritus	anorexia	transaminitis	projectile-vomiting	chill	distress-respiratory	fever	vomiting</td></tr>																
+												<tr><td>pericardial-effusion-body-substance</td><td>	pericardial-friction-rub	dyspnea	shortness-of-breath	hemodynamically-stable	cardiomegaly	hypotension	sputum-purulent	facial-paresis	pain	oliguria	blackout	intoxication</td></tr>																
+												<tr><td>adhesion</td><td>	flatulence	pain	large-for-dates-fetus	para-1	vomiting	lung-nodule	breech-presentation	shortness-of-breath	decreased-body-weight	immobile	unsteady-gait	hallucinations-visual	feeling-suicidal</td></tr>															
+												<tr><td>biliary-calculus</td><td>	vomiting	nausea	pain-abdominal	pain	cushingoid-facies	cushingoid-habitus	ascites	thicken	sore-to-touch	diarrhea	apyrexial	palpitation	</td></tr>															
+												<tr><td>endocarditis</td><td>	pleuritic-pain	thicken	myalgia	apyrexial	night-sweat	flare	shortness-of-breath	orthopnea	abscess-bacterial	hypotension	cough	metastatic-lesion	breath-sounds-decreased	decreased-body-weight	pulsus-paradoxus	hypokinesia		</td></tr>										
+												<tr><td>acquired-immuno-deficiency-syndrome</td><td>	fever	night-sweat	spontaneous-rupture-of-membranes	cough		decreased-body-weight	chill	diarrhea	pleuritic-pain	patient-non-compliance	tachypnea	productive-cough	muscle-hypotonia	hypotonic	feeling-suicidal</td>		</tr>											
+												<tr><td>pneumothorax</td><td>	dyspnea	cardiovascular-finding	cardiovascular-event	haemoptysis	cough	hypercapnia	soft-tissue-swelling	prostatism	agitation</td>	</tr>																		
+												<tr><td>accident-cerebrovascular</td><td>	dysarthria	asthenia	speech-slurred	facial-paresis	hemiplegia	unresponsiveness	seizure	numbness</td>	</tr>																			
+												<tr><td>confusion</td><td>	seizure	enuresis	lethargy	speech-slurred	fall	consciousness-clear	mental-status-changes	asterixis	unconscious-state	agitation	muscle-twitch	asthenia	sleepy	dizziness	headache	dysarthria	lightheadedness	tremor	hyponatremia	unresponsiveness</td></tr>								
+												<tr><td>candidiasis</td><td>	diarrhea	throat-sore	decreased-body-weight	chill	headache	abdominal-tenderness	patient-non-compliance	photophobia	night-sweat	painful-swallowing	poor-dentition	transaminitis	non-productive-cough	adverse-reaction	adverse-effect	abdominal-bloating	</td></tr>											
+												<tr><td>anxiety-state</td><td>	worry	feeling-suicidal	suicidal	sleeplessness	feeling-hopeless	irritable-mood	tremor	blackout	weepiness	has-religious-belief	nervousness	hallucinations-visual	formication	difficulty	pain-chest	patient-non-compliance	agitation	palpitation	hallucinations-auditory	mood-depressed	hot-flush	pain	consciousness-clear	nightmare</td></tr>				
+												<tr><td>cirrhosis</td><td>	ascites	fall	splenomegaly	pruritus	pain-abdominal	tumor-cell-invasion	distended-abdomen	lesion	hemodynamically-stable	guaiac-positive	sore-to-touch	bleeding-of-vagina</td>	</tr>															
+												<tr><td>pancytopenia</td><td>	hypoproteinemia	fatigue	haemorrhage	fatigability	cushingoid-facies	cushingoid-habitus	stool-color-yellow	colic-abdominal	</td></tr>																			
+												<tr><td>oral-candidiasis</td><td>	diarrhea	throat-sore	decreased-body-weight	chill	headache	abdominal-tenderness	patient-non-compliance	photophobia	night-sweat	painful-swallowing	poor-dentition	transaminitis	non-productive-cough	adverse-reaction	adverse-effect	abdominal-bloating</td></tr>												
+												<tr><td>diverticulitis</td><td>	pain-abdominal	abscess-bacterial	dullness	red-blotches	diarrhea	sore-to-touch	dysuria	pain	vomiting	sinus-rhythm	colic-abdominal	apyrexial	abdominal-tenderness	fever	unsteady-gait	thicken	urgency-of-micturition	anorexia	monoclonal	constipation</td>	</tr>							
+												<tr><td>spasm-bronchial</td><td>	shortness-of-breath	scar-tissue	apyrexial	no-known-drug-allergies	pain	productive-cough	throat-sore	dyspnea	chest-tightness	hypoxemia	tachypnea	sensory-discomfort	fever	vomiting	rhonchus	hemiplegia	fremitus	</td>	</tr>									
+												<tr><td>ulcer-peptic</td><td>	pain-abdominal	paraparesis	nausea	vomiting	polymyalgia	out-of-breath	pain-chest	hemiplegia	gurgle	hunger	apyrexial	nervousness		</td></tr>														
+												<tr><td>depression-mental</td><td>	feeling-suicidal	suicidal	hallucinations-auditory	feeling-hopeless	weepiness	sleeplessness	motor-retardation	irritable-mood	blackout	mood-depressed	hallucinations-visual	worry	agitation	tremor	intoxication	verbal-auditory-hallucinations	energy-increased	difficulty	nightmare	unable-to-concentrate	homelessness	</td></tr>						
+												<tr><td>emphysema-pulmonary</td><td>	behavior-showing-increased-motor-activity	scar-tissue	dyspnea-on-exertion	coordination-abnormal	myalgia	hypercapnia	clammy-skin	has-religious-belief	room-spinning	moan	night-sweat	cachexia	symptom-aggravating-factors	dyspnea	rale	flushing	painful-swallowing	arthralgia	choke	tenesmus	constipation		</td></tr>					
+												<tr><td>hypoglycemia</td><td>	unresponsiveness	hypothermia,-natural	incoherent	qt-interval-prolonged	lameness	claudication	unconscious-state	clammy-skin	polyuria	distress-respiratory	hypotension		</td>	</tr>														
+												<tr><td>dependence</td><td>	intoxication	tremor	agitation	suicidal	homelessness	prostatism	lethargy	seizure	muscle-twitch	stuffy-nose	feeling-hopeless	heavy-legs	rale	</td>	</tr>													
+												<tr><td>osteomyelitis</td><td>	pain	redness	prostate-tender	fever	difficulty-passing-urine	sore-to-touch	swelling	apyrexial	erythema	abscess-bacterial	pain-foot	urinary-hesitation</td>	</tr>															
+												<tr><td>hemorrhoids</td><td>	haemorrhage	bowel-sounds-decreased	decreased-stool-caliber	nausea-and-vomiting	hunger	diarrhea	dizziness	hyponatremia	clonus	pain	achalasia	burning-sensation	guaiac-positive	numbness-of-hand	wheezing	cough	</td>	</tr>										
+												<tr><td>primary-carcinoma-of-the-liver-cells</td><td>	mass-of-body-structure	splenomegaly	lesion	paresis	tumor-cell-invasion	room-spinning	haemorrhage	thicken	indifferent-mood	cachexia	hypothermia,-natural	pain-abdominal	hepatomegaly	hematocrit-decreased	stupor	decreased-body-weight	shortness-of-breath	cough	</td>	</tr>								
+												<tr><td>pyelonephritis</td><td>	fever	pain	urgency-of-micturition	hematuria	vomiting	chill	diarrhea	nausea	pain-abdominal	myalgia	fever	chill	</td></tr>															
+												<tr><td>pancreatitis</td><td>	vomiting	pain-abdominal	nausea	pain	diarrhea	stool-color-yellow	rigor---temperature-associated-observation	apyrexial	sore-to-touch</td>	</tr>																		
+												<tr><td>cholelithiasis</td><td>	vomiting	nausea	pain-abdominal	pain	cushingoid-facies	cushingoid-habitus	ascites	thicken	sore-to-touch	diarrhea	apyrexial	palpitation	</td>	</tr>														
+												<tr><td>cardiomyopathy</td><td>	shortness-of-breath	orthopnea	hypokinesia	jugular-venous-distention	palpitation	pain-chest	syncope	yellow-sputum	rale	dyspnea	dyspnea-on-exertion	left-atrial-hypertrophy	fatigue	weight-gain	patient-non-compliance</td>	</tr>												
+												<tr><td>Pneumocystis-carinii-pneumonia</td><td>	yellow-sputum	cachexia	chill	decreased-body-weight	productive-cough	myalgia	diarrhea	neck-stiffness	hacking-cough	dyspareunia	hypokalemia	dyspnea-on-exertion	poor-dentition	transaminitis	non-productive-cough	headache	floppy	spontaneous-rupture-of-membranes</td>	</tr>									
+												<tr><td>carcinoma-colon</td><td>	lesion	prostatism	constipation	general-discomfort	diarrhea	pain-abdominal	urinary-hesitation	dizzy-spells	shooting-pain	bradycardia	vomiting	systolic-ejection-murmur	nausea	hyperemesis	polydypsia	</td></tr>												
+												<tr><td>edema-pulmonary</td><td>	urgency-of-micturition	shortness-of-breath	rale	tachypnea	orthopnea	Heberden's-node	jugular-venous-distention	dyspnea	sweat	sweating-increased	patient-non-compliance	chest-discomfort	hyperkalemia	sinus-rhythm	pain-chest	hypotension	wheezing</td></tr>											
+												<tr><td>carcinoma-breast</td><td>	mass-in-breast	mass-of-body-structure	paresthesia	retropulsion	erythema	difficulty	lesion	estrogen-use	burning-sensation	dyspnea	swelling	formication</td></tr>																
+												<tr><td>hemiparesis</td><td>	dysarthria	paresis	asthenia	aphagia	seizure	speech-slurred	focal-seizures	hemiplegia	abnormal-sensation	unresponsiveness	stupor	drowsiness	sleepy	fremitus	Stahli's-line	stinging-sensation	paralyse	clonus	facial-paresis</td>	</tr>								
+												<tr><td>mitral-valve-insufficiency</td><td>	shortness-of-breath	dyspnea-on-exertion	asymptomatic	hypokinesia	dyspnea	syncope	thicken	left-atrial-hypertrophy	palpitation	fatigue	vomiting	pain	cardiomegaly	chest-discomfort</td></tr>														
+												<tr><td>peripheral-vascular-disease</td><td>	shortness-of-breath	rest-pain	angina-pectoris	unresponsiveness	hyperkalemia	sinus-rhythm	labored-breathing	dyspnea	sore-to-touch	anorexia	sleepy		</td></tr>															
+												<tr><td>tonic-clonic-seizures</td><td>	drowsiness	lip-smacking	myoclonus	tremor	phonophobia	rolling-of-eyes	sleepy	hirsutism	moody	muscle-twitch	unresponsiveness	headache	ambidexterity	absences-finding	spasm	decreased-body-weight	tumor-cell-invasion	</td>	</tr>									
+												<tr><td>effusion-pericardial</td><td>	pericardial-friction-rub	dyspnea	shortness-of-breath	hemodynamically-stable	cardiomegaly	hypotension	sputum-purulent	facial-paresis	pain	oliguria	blackout	intoxication</td></tr>																
+												<tr><td>thrombocytopaenia</td><td>	ecchymosis	monocytosis	posterior-rhinorrhea	haemorrhage	tachypnea	fever	pruritus	hypotension	fatigue	</td></tr>																		
+												<tr><td>adenocarcinoma</td><td>	mass-of-body-structure	lesion	decreased-body-weight	constipation	fremitus	decreased-stool-caliber	satiety-early	hematochezia	egophony	pain	cicatrisation	scar-tissue	pain-abdominal</td>	</tr>														
+												<tr><td>failure-heart-congestive</td><td>	shortness-of-breath	orthopnea	jugular-venous-distention	rale	dyspnea	cough	wheezing</td></tr>																					
+												<tr><td>exanthema</td><td>	fever	pruritus	macule	lesion	redness	headache	apyrexial	arthralgia	swelling	erythema	photophobia	chill	scratch-marks	pain	painful-swallowing	</td></tr>												
+												<tr><td>ischemia</td><td>	drowsiness	sleepy	pain-chest	angina-pectoris	pressure-chest	chest-discomfort	shortness-of-breath	dyspnea	sinus-rhythm	bradycardia	sweat	sweating-increased	rale	asymptomatic	anorexia</td></tr>													
+												<tr><td>hypertension-pulmonary</td><td>	shortness-of-breath	Stahli's-line	heavy-legs	breath-sounds-decreased	neck-stiffness	dyspnea-on-exertion	cyanosis	hypotension	left-atrial-hypertrophy			</td>	</tr>															
+												<tr><td>infection</td><td>	fever	erythema	decreased-translucency	hepatosplenomegaly	chill	pruritus	diarrhea	abscess-bacterial	swelling	pain	apyrexial	cough	</td></tr>															
+												<tr><td>cellulitis</td><td>	erythema	pain	swelling	redness	fever	abscess-bacterial	patient-non-compliance	hypesthesia	hyperacusis	pruritus	pain-chest	scratch-marks	chill	sore-to-touch	</td>	</tr>												
+												<tr><td>lymphatic-diseases</td><td>	pain	mass-of-body-structure	night-sweat	splenomegaly	lesion	chill	decreased-body-weight	swelling	fever	hyperacusis	fremitus	non-productive-cough	egophony	redness	hepatomegaly	fatigue	</td>	</tr>										
+												<tr><td>gastroenteritis</td><td>	pain-abdominal	breath-holding-spell	nausea	decreased-body-weight	sore-to-touch	scleral-icterus	fever	myalgia	hyponatremia	retch	mass-of-body-structure	decreased-body-weight</td>	</tr>															
+												<tr><td>parkinson-disease</td><td>	achalasia	fall	stiffness	withdraw	agitation	hemiplegia	difficulty	unresponsiveness	syncope	facial-paresis	orthostasis	worry	drowsiness	sleepy	hematuria	tremor	night-sweat	mass-of-body-structure	</td></tr>									
+												<tr><td>hernia</td><td>	pain-abdominal	pain	hyperventilation	excruciating-pain	gag	nausea	posturing	hemiplegia	sore-to-touch	haemorrhage	apyrexial	food-intolerance	pulse-absent	asthenia	mass-of-body-structure	thicken	</td></tr>											
+												<tr><td>colitis</td><td>	fever	thicken	green-sputum	vomiting	nausea-and-vomiting	awakening-early	pain	nausea	chill	tenesmus	urge-incontinence	pain-abdominal	hemodynamically-stable</td></tr>															
+												<tr><td>deep-vein-thrombosis</td><td>	swelling	pain	ecchymosis	shortness-of-breath	pain-in-lower-limb	cardiomegaly	rale	erythema	hypotension	clonus	non-productive-cough	redness	</td>	</tr>														
+												<tr><td>personality-disorder</td><td>	nightmare	feeling-hopeless	transsexual	hallucinations-auditory	irritable-mood	sleeplessness	agitation	weepiness	mood-depressed	scratch-marks	nausea-and-vomiting	extreme-exhaustion	side-pain	worry	enuresis	homelessness	nervousness	ascites	pruritus	</td></tr>								
+												<tr><td>hyperlipidemia</td><td>	pain-chest	angina-pectoris	palpitation	presence-of-q-wave	photopsia	sweat	sweating-increased	chest-discomfort	shortness-of-breath	giddy-mood	hypokinesia	hemiplegia	dizziness		</td></tr>													
+												<tr><td>pneumonia</td><td>	cough	fever	decreased-translucency	shortness-of-breath	rale	productive-cough	pleuritic-pain	yellow-sputum	breath-sounds-decreased	chill	rhonchus	green-sputum	non-productive-cough	wheezing	haemoptysis	distress-respiratory	tachypnea	malaise	night-sweat	</td>	</tr>							
+												<tr><td>gastroesophageal-reflux-disease	pain</td><td>	pain-chest	burning-sensation	hyponatremia	satiety-early	throbbing-sensation-quality	chest-tightness	sensory-discomfort	presence-of-q-wave	nausea	general-discomfort	constipation	palpitation	pain-abdominal	heartburn	sweat	sweating-increased	asthenia</td></tr>										
+												<tr><td>pneumonia-aspiration</td><td>	mediastinal-shift	fever	clonus	mental-status-changes	decreased-translucency	unresponsiveness	extreme-exhaustion	stupor	seizure	transaminitis	hemiplegia	cough	gurgle	pain	diarrhea	pain-abdominal</td></tr>												
+												<tr><td>stenosis-aortic-valve</td><td>	dyspnea-on-exertion	syncope	chest-discomfort	systolic-murmur	sciatica	angina-pectoris	pain-chest	frothy-sputum	bradycardia	shortness-of-breath	pain</td></tr>																	
+												<tr><td>hypertensive-disease</td><td>	pain-chest	shortness-of-breath	dizziness	asthenia	fall	syncope	vertigo	sweat	sweating-increased	palpitation	nausea	angina-pectoris	pressure-chest</td>	</tr>														
+												<tr><td>glaucoma</td><td>	fall	distended-abdomen	unsteady-gait	paresthesia	hyponatremia	agitation	unconscious-state	burning-sensation	lesion	mass-of-body-structure	</td></tr>																	
+												<tr><td>septicemia</td><td>	fever	distress-respiratory	hypotension	tachypnea	chill	lethargy	bradycardia	breech-presentation	cyanosis	spontaneous-rupture-of-membranes	haemorrhage	unresponsiveness	rale	apyrexial</td>	</tr>													
+												<tr><td>bronchitis</td><td>	cough	wheezing	shortness-of-breath	chest-tightness	fever	throat-sore	productive-cough	hepatosplenomegaly	night-sweat	haemoptysis	labored-breathing	snuffle	hacking-cough	dyspnea	chill	stridor	decreased-body-weight	</td></tr>										
+												<tr><td>delusion</td><td>	loose-associations	giddy-mood	feeling-hopeless	agitation	hallucinations-auditory	irritable-mood	sleeplessness	neologism	homicidal-thoughts	disturbed-family	worry	decompensation	verbally-abusive-behavior	catatonia	suicidal	terrify	blackout	weepiness	impaired-cognition	irritable-mood	agitation	</td>	</tr>					
+												<tr><td>upper-respiratory-infection	cough</td><td>	throat-sore	wheezing	shortness-of-breath	labored-breathing	fever	stuffy-nose	non-productive-cough	snuffle	indifferent-mood	egophony	barking-cough	polymyalgia	pleuritic-pain	night-sweat	dyspnea	productive-cough	decreased-translucency	rhonchus	rapid-shallow-breathing	apyrexial	noisy-respiration	nasal-discharge-present	emphysematous-change	frail	cystic-lesion	symptom-aggravating-factors	hemodynamically-stable</td></tr>
+												<tr><td>dementia</td><td>	fever	fall	unresponsiveness	lethargy	agitation	ecchymosis	syncope	rale	unconscious-state	cough	bedridden	bedridden	pain	facial-paresis	abdominal-tenderness	rhonchus	unsteady-gait	hallucinations-auditory	</td></tr>									
+												<tr><td>ketoacidosis-diabetic</td><td>	polyuria	vomiting	nausea	pain-abdominal	milky	feeling-strange	gurgle	nervousness	abdominal-tenderness	regurgitates-after-swallowing	vision-blurred	urinary-hesitation	diarrhea	seizure	aura	</td></tr>												
+												<tr><td>manic-disorder</td><td>	energy-increased	suicidal	hypersomnia	feeling-suicidal	blanch	hallucinations-auditory	hallucinations-visual	elation	verbal-auditory-hallucinations	feeling-hopeless	difficulty	decompensation	verbally-abusive-behavior	suicidal	feeling-suicidal	</td></tr>												
+												<tr><td>suicide-attempt</td><td>	hallucinations-auditory	sleeplessness	suicidal	motor-retardation	weepiness	unable-to-concentrate	todd-paralysis	worry	fatigue	tremor	alcoholic-withdrawal-symptoms	agitation	unresponsiveness	blackout	withdraw	difficulty	irritable-mood	sensory-discomfort	drowsiness	formication	unconscious-state	fever	cough</td></tr>					
+												<tr><td>hiv-infections</td><td>	fever	night-sweat	spontaneous-rupture-of-membranes	cough		decreased-body-weight	chill	diarrhea	pleuritic-pain	patient-non-compliance	tachypnea	productive-cough	muscle-hypotonia	hypotonic	feeling-suicidal</td></tr>													
+												<tr><td>benign-prostatic-hypertrophy</td><td>	mental-status-changes	cachexia	blackout	orthostasis	orthopnea	night-sweat	distress-respiratory	anorexia	dysarthria		</td>	</tr>																
+												<tr><td>HIV</td><td>	fever	night-sweat	spontaneous-rupture-of-membranes	cough		decreased-body-weight	chill	diarrhea	pleuritic-pain	patient-non-compliance	tachypnea	productive-cough	muscle-hypotonia	hypotonic	feeling-suicidal	</td></tr>												
+												<tr><td>bacteremia</td><td>	fever	chill	flushing	unresponsiveness	indifferent-mood	urinoma	vomiting	distended-abdomen	hypoalbuminemia	pustule	prostatism	diarrhea	abdominal-tenderness	pleuritic-pain	decreased-translucency	pallor	</td>	</tr>										
+												<tr><td>neutropenia</td><td>	transaminitis	splenomegaly	night-sweat	apyrexial	lesion	snuffle	chill	cough	monoclonal	hypocalcemia-result	oliguria	rhd-positive	distress-respiratory	</td></tr>														
+												<tr><td>hepatitis-B</td><td>	inappropriate-affect	tachypnea	yellow-sputum	projectile-vomiting	poor-feeding	pain-abdominal	abdominal-tenderness	wheelchair-bound	moan	</td></tr>																		
+												<tr><td>hepatitis-C</td><td>	ascites	distended-abdomen	feeling-suicidal	cough	ache	macerated-skin	heavy-feeling	hallucinations-auditory	chill	asterixis	patient-non-compliance	</td></tr>																
+												<tr><td>coronary-heart-disease</td><td>	pain-chest	angina-pectoris	shortness-of-breath	hypokinesia	sweat	sweating-increased	pressure-chest	dyspnea-on-exertion	orthopnea	chest-tightness	</td>	</tr>																
+												<tr><td>carcinoma-of-lung</td><td>	lesion	cough	lung-nodule	shortness-of-breath	haemoptysis	debilitation	gurgle	ache	rale	night-sweat	decreased-translucency	asthenia	metastatic-lesion	agitation	irritable-mood	</td></tr>												
+												<tr><td>arthritis</td><td>	pain	hemodynamically-stable	sleeplessness	asthenia	syncope	swelling	atypia	general-unsteadiness	shortness-of-breath	distended-abdomen</td></tr>																		
+												<tr><td>malignant-neoplasm-of-lung</td><td>	lesion	cough	lung-nodule	shortness-of-breath	haemoptysis	debilitation	gurgle	ache	rale	night-sweat	decreased-translucency	asthenia	metastatic-lesion	agitation	irritable-mood</td>	</tr>												
+												<tr><td>carcinoma</td><td>	mass-of-body-structure	pain	lesion	tumor-cell-invasion	thicken	decreased-body-weight	hoarseness	general-discomfort	metastatic-lesion	non-productive-cough	constipation	unhappy	paresthesia	gravida-0	diarrhea	sore-to-touch	heartburn	nausea	lung-nodule	</td>	</tr>							
+												<tr><td>delirium</td><td>	unsteady-gait	withdraw	hyponatremia	verbally-abusive-behavior	feeling-suicidal	unresponsiveness	worry	drowsiness	sleepy	hallucinations-auditory	suicidal	fever	diarrhea</td>	</tr>														
+												<tr><td>melanoma</td><td>	mass-of-body-structure	paraparesis	fever	gravida-0	pain	pruritus	mass-in-breast	vomiting	diarrhea	</td></tr>																		
+												<tr><td>kidney-failure-acute</td><td>	hyperkalemia	hypotension	hypocalcemia-result	oliguria	hemodynamically-stable	asthenia	hypothermia,-natural	diarrhea	haemorrhage	unresponsiveness</td></tr>																		
+												<tr><td>diabetes</td><td>	polyuria	polydypsia	shortness-of-breath	pain-chest	asthenia	nausea	orthopnea	rale	sweat	sweating-increased	unresponsiveness	mental-status-changes	vertigo	vomiting	labored-breathing	</td>	</tr>											
+												<tr><td>systemic-infection</td><td>	fever	distress-respiratory	hypotension	tachypnea	chill	lethargy	bradycardia	breech-presentation	cyanosis	spontaneous-rupture-of-membranes	haemorrhage	unresponsiveness	rale	apyrexial	</td></tr>													
+												<tr><td>malignant-neoplasms</td><td>	pain	mass-of-body-structure	lesion	cushingoid-facies	cushingoid-habitus	emphysematous-change	decreased-body-weight	ascites	hoarseness	thicken	hematuria	pulsus-paradoxus	gravida-10	mass-of-body-structure	lesion	heartburn	night-sweat	thicken	chill	decreased-translucency	pain-abdominal	dullness	food-intolerance	distress-respiratory	hypotension	</td></tr>		
+												<tr><td>neuropathy</td><td>	asthenia	numbness	nausea-and-vomiting	awakening-early	hydropneumothorax	superimposition	fatigability	tenesmus	pain	slowing-of-urinary-stream	</td></tr>																	
+												<tr><td>overload-fluid</td><td>	rale	jugular-venous-distention	hyperkalemia	orthopnea	shortness-of-breath	drowsiness	sleepy	weight-gain	hypokalemia	hypotension	swelling	distended-abdomen</td></tr>																
+												<tr><td>migraine-disorders</td><td>	ambidexterity	vomiting	dizziness	numbness	nausea	fever	splenomegaly</td></tr>
+	                                    </tbody>
+	                                </table>
+
+	                            </div>
+	                        </div>
+	                    </div>
+
+	                    
+	                            
+	                </div>
+	            </div>
+	        </div>
+        
+	    </div>
+	</div>
+
+</body>
+
+	<!--   Core JS Files   -->
+	<script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/material.min.js" type="text/javascript"></script>
+
+	<!--  Charts Plugin -->
+	<script src="js/chartist.min.js"></script>
+
+	<!--  Notifications Plugin    -->
+	<script src="js/bootstrap-notify.js"></script>
+
+	<!--  Google Maps Plugin    -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+	<!-- Material Dashboard javascript methods -->
+	<script src="js/material-dashboard.js"></script>
+
+	<!-- Material Dashboard DEMO methods, don't include it in your project! -->
+	<script src="js/demo.js"></script>
+
+</html>
